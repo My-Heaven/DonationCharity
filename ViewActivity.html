@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.72.0" />
+    <title>Album example · Bootstrap</title>
+
+    <link
+      rel="canonical"
+      href="https://v5.getbootstrap.com/docs/5.0/examples/album/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      @import url("http://fonts.googleapis.com/css?family=Open+Sans:200,300");
+
+      body {
+        font-family: "Open Sans", Arial, Helvetica, Sans-Serif;
+        background: none repeat scroll 0 0 #ebeeed;
+      }
+      .port-image {
+        width: 400px;
+        height: 400px;
+      }
+
+      .media {
+        background: none repeat scroll 0 0 #fff;
+        border-bottom: 1px solid #c7c9c8;
+        margin-bottom: 30px;
+      }
+
+      .media a {
+        overflow: hidden;
+      }
+
+      .media-img {
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+      }
+
+      .media-img .img-overlay {
+        background: none repeat scroll 0 0 rgba(0, 0, 0, 0.4);
+        height: 100%;
+        opacity: 0;
+        padding-top: 50%;
+        position: absolute;
+        text-align: center;
+        transition: opacity 0.3s ease-out 0s;
+        visibility: hidden;
+        width: 100%;
+        z-index: 4;
+      }
+
+      .media:hover .img-overlay a,
+      .media .img-overlay:hover a {
+        display: inline-block;
+      }
+
+      .media:hover .img-overlay,
+      .media .media-img:hover .img-overlay {
+        opacity: 1;
+        transition: opacity 0.3s ease-out 0s;
+        visibility: visible;
+      }
+
+      .media div.media-img img {
+        height: auto;
+        transform: scale(1, 1);
+        transition-duration: 2000ms;
+        transition-timing-function: ease-out;
+        width: 100%;
+      }
+
+      .center-parent {
+        display: flex;
+        justify-content: center;
+        font-size: 100%;
+      }
+      /* menu */
+      #main-menu {
+        padding-top: 20px;
+      }
+      #main-menu ul {
+        margin: 0 0;
+        padding-left: 0;
+        list-style-type: none;
+      }
+      #main-menu ul li {
+        float: left;
+        padding: 10px 15px;
+        border-bottom: 1px solid #aaa;
+      }
+      #main-menu ul li.active {
+        border: 1px solid #aaa;
+        border-radius: 4px 4px 0 0;
+        border-bottom: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">
+                Donating to charity is a major mood-booster. The knowledge that
+                you’re helping others is hugely empowering and, in turn, can
+                make you feel happier and more fulfilled. Research has
+                identified a link between making a donation to charity and
+                increased activity in the area of the brain that registers
+                pleasure - proving that as the old adage goes, it really is far
+                better to give than to receive.
+              </p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a
+            href="HomePage.html"
+            class="navbar-brand d-flex align-items-center"
+          >
+            <strong>Donation Charity</strong>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarHeader"
+            aria-controls="navbarHeader"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="container" id="main-menu">
+      <div class="center-parent">
+        <ul>
+          <li>
+            <a href="ViewCampaign.html" title="home">Người ủng hộ</a>
+          </li>
+          <li class="active">
+            <a href="ViewActivity.html" title="product">Hoạt Động</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container bootstrap snippets bootdey">
+      <div class="row"></div>
+      <div class="row">
+        <div class="media">
+          <div class="row">
+            <div class="media-img col-sm-4 col-md-3 col-lg-3">
+              <img class="port-image" src="images\camphuchia-1b.jpg" />
+            </div>
+            <div class="col-sm-8 col-md-9 col-lg-9">
+              <h3>
+                <a href="#"> Sữa </a>
+              </h3>
+              <p>Giá: 100,000 VND/Thùng</p>
+              <p>Số lượng: 100 thùng</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="media">
+          <div class="row">
+            <div class="media-img col-sm-4 col-md-3 col-lg-3">
+              <img
+                class="port-image"
+                src="images\binh-nuoc-tinh-khiet-20l392835701990.jpg"
+              />
+            </div>
+            <div class="col-sm-8 col-md-9 col-lg-9">
+              <h3>
+                <a href="#"> Bình nước 20 lít </a>
+              </h3>
+              <p>Giá: 100,000 VND/Thùng</p>
+              <p>Số lượng: 100 bình</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="media">
+          <div class="row">
+            <div class="media-img col-sm-4 col-md-3 col-lg-3">
+              <img class="port-image" src="images\OIF.jpg" />
+            </div>
+            <div class="col-sm-8 col-md-9 col-lg-9">
+              <h3>
+                <a href="#"> Thùng mì gói </a>
+              </h3>
+              <p>Giá: 100,000 VND/Thùng</p>
+              <p>Số lượng: 100 thùng</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="media">
+          <div class="row">
+            <div class="media-img col-sm-4 col-md-3 col-lg-3">
+              <img class="port-image" src="images\camphuchia-1b.jpg" />
+            </div>
+            <div class="col-sm-8 col-md-9 col-lg-9">
+              <h3>
+                <a href="#"> Sữa </a>
+              </h3>
+              <p>Giá: 100,000 VND/Thùng</p>
+              <p>Số lượng: 100 thùng</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="media">
+          <div class="row">
+            <div class="media-img col-sm-4 col-md-3 col-lg-3">
+              <img
+                class="port-image"
+                src="images\binh-nuoc-tinh-khiet-20l392835701990.jpg"
+              />
+            </div>
+            <div class="col-sm-8 col-md-9 col-lg-9">
+              <h3>
+                <a href="#"> Bình nước 20 lít </a>
+              </h3>
+              <p>Giá: 100,000 VND/Thùng</p>
+              <p>Số lượng: 100 bình</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="media">
+          <div class="row">
+            <div class="media-img col-sm-4 col-md-3 col-lg-3">
+              <img class="port-image" src="images\OIF.jpg" />
+            </div>
+            <div class="col-sm-8 col-md-9 col-lg-9">
+              <h3>
+                <a href="#"> Thùng mì gói </a>
+              </h3>
+              <p>Giá: 100,000 VND/Thùng</p>
+              <p>Số lượng: 100 thùng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-muted py-5">
+      <div class="container"></div>
+    </footer>
+  </body>
+</html>
