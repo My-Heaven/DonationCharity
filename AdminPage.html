@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.72.0" />
+    <title>Admin Page</title>
+
+    <link
+      rel="canonical"
+      href="https://v5.getbootstrap.com/docs/5.0/examples/album/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">
+                Donating to charity is a major mood-booster. The knowledge that
+                you’re helping others is hugely empowering and, in turn, can
+                make you feel happier and more fulfilled. Research has
+                identified a link between making a donation to charity and
+                increased activity in the area of the brain that registers
+                pleasure - proving that as the old adage goes, it really is far
+                better to give than to receive.
+              </p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <strong>Donation Charity Admin Page</strong>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarHeader"
+            aria-controls="navbarHeader"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h4>Quản lí tài khoản</h4>
+            <button
+              type="button"
+              class="btn btn-success"
+              onclick="dieu_huong1()"
+            >
+              Create account
+            </button>
+            <script>
+              function dieu_huong1() {
+                location.assign("CreateAccount.html");
+              }
+            </script>
+            <script>
+              function dieu_huong2() {
+                location.assign("Report.html");
+              }
+            </script>
+            <div class="table-responsive">
+              <table id="mytable" class="table table-bordred table-striped">
+                <thead>
+                  <th>Tổ chức</th>
+                  <th>Email</th>
+                  <th>Địa chỉ</th>
+                  <th>Tên tài khoản</th>
+                  <th>Mật khẩu</th>
+                  <th>Status</th>
+
+                  <th>Delete</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Hội Đồng Hương</td>
+                    <td>hdh1112@gmail.com</td>
+                    <td>23/2 Quảng Hiệp - Hiệp Thạnh - Đức Trọng - Lâm Đồng</td>
+                    <td>hdh1231223</td>
+                    <td>123456789</td>
+                    <td style="color: green">Active</td>
+                    <td>
+                      <p
+                        data-placement="top"
+                        data-toggle="tooltip"
+                        title="Delete"
+                      >
+                        <button
+                          onclick="dieu_huong2()"
+                          class="btn btn-danger btn-xs"
+                          data-title="Delete"
+                          data-toggle="modal"
+                          data-target="#delete"
+                        >
+                          <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Hội Đồng Hương</td>
+                    <td>hdh1112@gmail.com</td>
+                    <td>23/2 Quảng Hiệp - Hiệp Thạnh - Đức Trọng - Lâm Đồng</td>
+                    <td>hdh1231223</td>
+                    <td>123456789</td>
+                    <td style="color: green">Active</td>
+                    <td>
+                      <p
+                        data-placement="top"
+                        data-toggle="tooltip"
+                        title="Delete"
+                      >
+                        <button
+                          class="btn btn-danger btn-xs"
+                          data-title="Delete"
+                          data-toggle="modal"
+                          data-target="#delete"
+                        >
+                          <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Hội Đồng Hương</td>
+                    <td>hdh1112@gmail.com</td>
+                    <td>23/2 Quảng Hiệp - Hiệp Thạnh - Đức Trọng - Lâm Đồng</td>
+                    <td>hdh1231223</td>
+                    <td>123456789</td>
+                    <td style="color: green">Active</td>
+                    <td>
+                      <p
+                        data-placement="top"
+                        data-toggle="tooltip"
+                        title="Delete"
+                      >
+                        <button
+                          class="btn btn-danger btn-xs"
+                          data-title="Delete"
+                          data-toggle="modal"
+                          data-target="#delete"
+                        >
+                          <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Hội Đồng Hương</td>
+                    <td>hdh1112@gmail.com</td>
+                    <td>23/2 Quảng Hiệp - Hiệp Thạnh - Đức Trọng - Lâm Đồng</td>
+                    <td>hdh1231223</td>
+                    <td>123456789</td>
+                    <td style="color: green">Active</td>
+                    <td>
+                      <p
+                        data-placement="top"
+                        data-toggle="tooltip"
+                        title="Delete"
+                      >
+                        <button
+                          class="btn btn-danger btn-xs"
+                          data-title="Delete"
+                          data-toggle="modal"
+                          data-target="#delete"
+                        >
+                          <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Hội Đồng Hương</td>
+                    <td>hdh1112@gmail.com</td>
+                    <td>23/2 Quảng Hiệp - Hiệp Thạnh - Đức Trọng - Lâm Đồng</td>
+                    <td>hdh1231223</td>
+                    <td>123456789</td>
+                    <td style="color: green">Active</td>
+                    <td>
+                      <p
+                        data-placement="top"
+                        data-toggle="tooltip"
+                        title="Delete"
+                      >
+                        <button
+                          class="btn btn-danger btn-xs"
+                          data-title="Delete"
+                          data-toggle="modal"
+                          data-target="#delete"
+                        >
+                          <span class="glyphicon glyphicon-trash"></span>
+                        </button>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="clearfix"></div>
+              <ul class="pagination pull-right">
+                <li class="disabled">
+                  <a href="#"
+                    ><span class="glyphicon glyphicon-chevron-left"></span
+                  ></a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                  <a href="#"
+                    ><span class="glyphicon glyphicon-chevron-right"></span
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="edit"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="edit"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-hidden="true"
+              >
+                <span
+                  class="glyphicon glyphicon-remove"
+                  aria-hidden="true"
+                ></span>
+              </button>
+              <h4 class="modal-title custom_align" id="Heading">
+                Edit Your Detail
+              </h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <input class="form-control" type="text" placeholder="Mohsin" />
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="text" placeholder="Irshad" />
+              </div>
+              <div class="form-group">
+                <textarea
+                  rows="2"
+                  class="form-control"
+                  placeholder="CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan"
+                ></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-warning btn-lg"
+                style="width: 100%"
+              >
+                <span class="glyphicon glyphicon-ok-sign"></span> Update
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+
+      <div
+        class="modal fade"
+        id="delete"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="edit"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-hidden="true"
+              >
+                <span
+                  class="glyphicon glyphicon-remove"
+                  aria-hidden="true"
+                ></span>
+              </button>
+              <h4 class="modal-title custom_align" id="Heading">
+                Delete this entry
+              </h4>
+            </div>
+            <div class="modal-body">
+              <div class="alert alert-danger">
+                <span class="glyphicon glyphicon-warning-sign"></span> Are you
+                sure you want to delete this Record?
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success">
+                <span class="glyphicon glyphicon-ok-sign"></span> Yes
+              </button>
+              <button
+                type="button"
+                class="btn btn-default"
+                data-dismiss="modal"
+              >
+                <span class="glyphicon glyphicon-remove"></span> No
+              </button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+    </main>
+
+    <footer class="text-muted py-5">
+      <div class="container">
+        <p class="mb-1">HCI201 - HungLD - Donation Charity - FPT HCM</p>
+      </div>
+    </footer>
+  </body>
+</html>
